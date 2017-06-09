@@ -10,6 +10,3 @@ def index():
 
 if __name__ == '__main__':
    app.run(debug = True)
-
-
-app.config.from_object(__name__) # load config from this file , flaskr.py
