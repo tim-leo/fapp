@@ -4,9 +4,17 @@ from flask import Flask, request, session, g, redirect, url_for, abort, render_t
 
 app = Flask(__name__) # create the application instance :)
 
+
 @app.route('/')
+@app.route('/index')
 def index():
-   return render_template('index.htlm')
+    return render_template('index.html')
+
+
+@app.route('/validusers')
+def validusers():
+    return render_template('validusers.html')
+
 
 if __name__ == '__main__':
-   app.run(debug = True)
+    app.run(debug = True)
