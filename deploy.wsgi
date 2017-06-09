@@ -7,4 +7,5 @@ import site
 sys.path.append('/var/www/fapp')
 
 # import my_flask_app as application
-from fapp import app
+# from fapp import app
+application = app
