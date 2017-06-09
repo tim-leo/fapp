@@ -1,0 +1,43 @@
+html, body{
+  background: url("/static/img/indexback.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  margin:0;
+  padding:0;
+}
+#jtronoverride{
+  background-color: transparent;
+}
+.boxy{
+  min-height: 100%;  /* Fallback for blrowsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+  text-align: center;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+}
+.dick {
+  font-size: 3em;
+  color: #111111;
+  text-align: center;
+  width: 100%;
+  vertical-align: middle;
+
+}
+.centertext{
+  height: 100%;
+  width: 100%;
+
+}
+.dicks {
+  background-color: #373737;
+  font-size: 3em;
+  color: #c0b283;
+  text-align: center;
+  width: 100%;
+  vertical-align: middle;
+
+}
