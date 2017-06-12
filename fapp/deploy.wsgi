@@ -5,7 +5,7 @@ import site
 
 # Path of execution
 
-# sys.path.append('/var/www/fapp')
+sys.path.append('/var/www/fapp/fapp')
 
 # import my_flask_app as application
 # from fapp  import app
@@ -25,4 +25,4 @@ if path not in sys.path:
 # file.
 
 # Ensure there is an app.py script in the current folder
-from fapp import fapp as application
+from fapp import app as application
