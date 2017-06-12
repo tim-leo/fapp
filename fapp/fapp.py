@@ -15,8 +15,10 @@ def index():
 def validusers():
     return render_template('validusers.html')
 
+@app.route('/contact')
+def validusers():
+    return render_template('contact.html')
+
 
 if __name__ == '__main__':
     app.run(debug = True)
-
-
