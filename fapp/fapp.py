@@ -8,7 +8,8 @@ app = Flask(__name__) # create the application instance :)
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html')
+    title = "A Fancy Title"
+    return render_template('index.html', title=title)
 
 
 @app.route('/validusers')
@@ -16,8 +17,13 @@ def validusers():
     return render_template('validusers.html')
 
 @app.route('/contact')
-def validusers():
+def contact():
     return render_template('contact.html')
+
+@app.after_request
+def apply_caching(response):
+    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    return response
 
 
 if __name__ == '__main__':
