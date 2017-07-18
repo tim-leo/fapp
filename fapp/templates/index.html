@@ -1,8 +1,29 @@
 <!DOCTYPE html> {%extends 'base.html'%} {%block links%}
 <link href="{{ url_for('static', filename='css/index.css') + '?q=1280549780' }}" rel="stylesheet" type="text/css"> {%endblock%}
  {% block content%}
-<div id="jtronoverride" class="jumbotron boxy">
+<div class>
+  <div class="overlay">
+   {% with messages = get_flashed_messages(with_categories=true)%}
+   {% if messages %}
+     {% for messages in messages %}
+     <p class="labeltext"> {{ messages[1] }}</p>
+     {% endfor%}
+   {% endif %}
+   {% endwith %}
+   <form action="" method="post">
+     <!-- {{ form.csrf }} -->
 
+     <div>
+       <span class="labeltext">{{ form.usernames.label }}</span> {{form.usernames}}
+     </div>
+     <div>
+       <input type="submit" value="Submit"/>
+     </div>
+   </form>
+  </div>
+</div>
+
+<div id="jtronoverride" class="jumbotron boxy">
   <div class="dick"><a href="validusers">Welcome</a></div>
 </div>
 

@@ -38,3 +38,10 @@ a:link, a:visited, a:hover, a:active {
   width: 100%;
 
 }
+.overlay{
+  position: static;
+  text-align: right;
+}
+.labeltext{
+  color:white;
+}
